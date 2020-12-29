@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.29)  24 DEC 2020 18:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.7.29)  29 DEC 2020 21:50
 entering extended mode
-**"d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.tex"
-("d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.tex"
+**d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.tex
+(d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-07-17> (C:\Users\surre\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrartcl.cls
 Document Class: scrartcl 2020/07/22 v3.31 KOMA-Script document class (article)
@@ -236,7 +236,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count194
 \l__pdf_internal_box=\box50
-) ("d:/Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.aux")
+) (d:/Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.aux)
 \openout1 = `Comp_Arch_RIPASSONE.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -293,12 +293,11 @@ File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
 
 
-{C:/Users/surre/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] [4] [5]
+{C:/Users/surre/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] [3] [4] [5] [6]
 Underfull \hbox (badness 1019) in paragraph at lines 120--120
 [][]|\T1/cmr/m/n/9 Truth ta-ble of an
  []
 
-[6]
 
 Package wrapfig Warning: Collision between wrapping environments on input line 124.
 
@@ -325,12 +324,13 @@ Underfull \hbox (badness 1629) in paragraph at lines 123--126
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 126.
 
-<./images/D_FF.pdf, id=41, 462.16666pt x 185.13165pt>
+[7 <./images/SR_latch.pdf>]
+<./images/D_FF.pdf, id=53, 462.16666pt x 185.13165pt>
 File: ./images/D_FF.pdf Graphic file (type pdf)
 <use ./images/D_FF.pdf>
 Package pdftex.def Info: ./images/D_FF.pdf  used on input line 177.
 (pdftex.def)             Requested size: 231.08276pt x 92.56558pt.
-[7 <./images/SR_latch.pdf>]
+
 Underfull \hbox (badness 7064) in paragraph at lines 181--182
  \T1/cmss/bx/n/10.95 Master-slave flip flop[] \T1/cmr/m/n/10.95 To
  []
@@ -340,7 +340,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
-[12]
+[12] [13]
 Overfull \hbox (3.36118pt too wide) in paragraph at lines 276--284
  [][] 
  []
@@ -350,23 +350,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--284
 \T1/cmr/m/n/10.95 lem.
  []
 
-[13]
-<./images/tristate.pdf, id=79, 258.12436pt x 54.9252pt>
+[14]
+<./images/tristate.pdf, id=82, 258.12436pt x 54.9252pt>
 File: ./images/tristate.pdf Graphic file (type pdf)
 <use ./images/tristate.pdf>
 Package pdftex.def Info: ./images/tristate.pdf  used on input line 308.
 (pdftex.def)             Requested size: 258.12372pt x 54.92505pt.
- [14] [15 <./images/tristate.pdf>] [16] ("d:/Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.aux") ) 
+ [15 <./images/tristate.pdf>] [16] (d:/Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.aux) ) 
 Here is how much of TeX's memory you used:
  7286 strings out of 481225
- 132870 string characters out of 2906174
- 493296 words of memory out of 3000000
+ 132536 string characters out of 2906174
+ 492299 words of memory out of 3000000
  22788 multiletter control sequences out of 15000+200000
  554151 words of font info for 76 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,53p,10700b,410s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,10n,53p,10665b,410s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfbx0900.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm0900.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx1095.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx1200.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx1440.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfsx2074.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sfti1095.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt0800.pfb><C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on "d:/Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.pdf" (16 pages, 740512 bytes).
+Output written on d:/Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.pdf (16 pages, 738016 bytes).
 PDF statistics:
  163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

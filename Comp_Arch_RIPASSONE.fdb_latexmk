@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1608830857 "d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.tex" "d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.pdf" "Comp_Arch_RIPASSONE" 1608830858
+["pdflatex"] 1609275006 "d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.tex" "d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.pdf" "Comp_Arch_RIPASSONE" 1609275008
   "C:/Users/surre/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1596030121 10051121 4c44397a6dcd52bc96aa98c74adc1a23 ""
   "C:/Users/surre/AppData/Local/MiKTeX/pdftex/config/pdftex.map" 1608218708 278392 70e41675f518162771d7c9e1f1d77684 ""
   "C:/Users/surre/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1001771820 2971 def0b6c1f0b107b3b936def894055589 ""
@@ -98,16 +98,16 @@
   "C:/Users/surre/AppData/Local/Programs/MiKTeX/tex/latex/koma-script/typearea.sty" 1595421420 55969 80ac7a4faa849549199c790d376e4c19 ""
   "C:/Users/surre/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdfmode.def" 1593421250 24606 ecae4e851ce9ce4554d156050e5057f9 ""
   "C:/Users/surre/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
-  "Comp_Arch_RIPASSONE.aux" 1608830858 10454 0361a020d51531bb3636dca7c02e79fd "pdflatex"
-  "Comp_Arch_RIPASSONE.tex" 1608830854 44368 0a2279c262f18dd04ce5b3eb7142958d ""
-  "d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.aux" 1608830858 10454 0361a020d51531bb3636dca7c02e79fd ""
-  "d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.tex" 1608830854 44368 0a2279c262f18dd04ce5b3eb7142958d ""
+  "Comp_Arch_RIPASSONE.aux" 1609275007 10343 fa2b5617bce57687fba2caf86aa7566d "pdflatex"
+  "Comp_Arch_RIPASSONE.tex" 1609275005 44546 23240320fbc57a2ff459111516193a1c ""
+  "d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.aux" 1609275007 10343 fa2b5617bce57687fba2caf86aa7566d ""
+  "d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.tex" 1609275005 44546 23240320fbc57a2ff459111516193a1c ""
   "images/D_FF.pdf" 1608222075 258064 258345a3d778c99a97ebd7ae8ba06fd5 ""
   "images/SR_latch.pdf" 1608830358 54012 0db1f5254d0a00ad66fff1c4e0c4bc65 ""
   "images/tristate.pdf" 1608741577 44109 d24c1172857645f4ccfdeb1d9e6e059a ""
   (generated)
+  "d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.pdf"
   "Comp_Arch_RIPASSONE.log"
-  "d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.log"
-  "Comp_Arch_RIPASSONE.aux"
   "Comp_Arch_RIPASSONE.pdf"
-  "d:/Files/Documents/LaTeX docs/Appunti Uni/Computer Architecture I/classes/RIPASSONE/Comp_Arch_RIPASSONE.pdf"
+  "d:/Files/Documents/GitHub/comparch-ripassone_gorla/Comp_Arch_RIPASSONE.log"
+  "Comp_Arch_RIPASSONE.aux"

@@ -1,7 +1,7 @@
-PWD d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE
+PWD d:\Files\Documents\GitHub\comparch-ripassone_gorla
 INPUT C:\Users\surre\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.tex
-OUTPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.log
+INPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.tex
+OUTPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.log
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrartcl.cls
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrartcl.cls
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\koma-script\scrkbase.sty
@@ -66,9 +66,9 @@ INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\graphics-def\pdftex.def
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.aux
-INPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.aux
-OUTPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.aux
+INPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.aux
+INPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.aux
+OUTPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.aux
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -116,14 +116,14 @@ INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-OUTPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.pdf
+OUTPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.pdf
 INPUT C:\Users\surre\AppData\Local\MiKTeX\pdftex\config\pdftex.map
-INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
-INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsx1200.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0800.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0800.tfm
+INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
+INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecsx1200.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecrm0900.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecbx0900.tfm
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
@@ -140,7 +140,7 @@ INPUT images\tristate.pdf
 INPUT .\images\tristate.pdf
 INPUT .\images\tristate.pdf
 INPUT .\images\tristate.pdf
-INPUT d:\Files\Documents\LaTeX docs\Appunti Uni\Computer Architecture I\classes\RIPASSONE\Comp_Arch_RIPASSONE.aux
+INPUT d:\Files\Documents\GitHub\comparch-ripassone_gorla\Comp_Arch_RIPASSONE.aux
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\cm-super\cm-super-t1.enc
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
 INPUT C:\Users\surre\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb

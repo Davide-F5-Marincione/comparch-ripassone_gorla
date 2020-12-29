@@ -12,7 +12,7 @@
 
 \title{Computer Architecture mega review}
 \author{An anonymous author}
-\date{v0.1 — 'You are (not) alone'}
+\date{v0.1.01 — 'You are (not) alone'}
 
 \newcommand{\zero}{\texttt{0}}
 \newcommand{\one}{\texttt{1}}
@@ -29,7 +29,7 @@
     \paragraph{How to get the opposite of a number in 2-complement?}
     To do that we have to complement each bit (pass through the NOT operator each of them) and add $+1$ to the resulting value. 
     \paragraph{Representing rational numbers}
-    Rational numbers are stored similarly to the scientific notation, we can define three fundamental parts- the integer part, the decimal part (mantissa) and the exponent. In the \texttt{IEEE-754} format there are defined multiple degrees of precision and in all of them the first bit is used for the sign (\zero for positive, negative otherwise):
+    Rational numbers are stored similarly to the scientific notation, we can define three fundamental parts- the integer part, the decimal part (mantissa) and the exponent. In the \texttt{IEEE-754} format there are defined multiple degrees of precision and in all of them the first bit is used for the sign (\zero\ for positive, negative otherwise):
     \begin{itemize}
         \item Half-precision: 16 bits, 5 for the exponent and 10 for the mantissa.
         \item Single-precision: 32 bits, 8 for the exponent and 23 for the mantissa.
@@ -37,7 +37,7 @@
         \item Quadruple-precision: 128 bits, \dots
     \end{itemize}
     To pass from a decimal number to this representation is pretty easy- we just have to change the base of the integer part using the iterated division method and to do the same on the decimal part using the iterated multiplication method, at the end we have to normalize the result such that we get a single digit (has to be a \one) on the integer part: from this we can get the mantissa and the exponent part (the exponent part has to be summed to its bias, which is equal to $2^{n-1}-1$, where $n$ is the number of available bits for the exponent representation). In the end the representation has to be written as $\langle s,e,m\rangle$, where $s$ is the sign part, $e$ the exponent part and $m$ the mantissa part.
-    Some reserved codes are defined in this representation, all bits in the exponent equal to \zero is the representation of $0$, while all bits equal to \one is equal to $\pm\infty$. The range of representation for this format is as follows (not taking into account the representation of $0$):
+    Some reserved codes are defined in this representation, all bits in the exponent equal to \zero\ is the representation of $0$, while all bits equal to \one is equal to $\pm\infty$. The range of representation for this format is as follows (not taking into account the representation of $0$):
     \begin{itemize}
         \item Max positive and negative values: $\pm 1,1\dots 1\times 2^{2^{e-1}-1}$
         \item Min positive and negative values: $\pm 1\times 2^{-2^{e-1}+1}$
@@ -47,14 +47,14 @@
     \end{equation*}
     \section{Detection and error correction codes}
     During transmission some bits may be altered and flip producing errors- to detect and correct those has been a challenge for a lot of mathematicians, programmers and engineers.
-    \subparagraph{Parity bit} The simplest type of error detection code is this, it simply consists in adding one bit to the message making the count of bits equal to \one odd or even (depends on the standard, usually it is even; another thing that depends on the standard is weather the bit is placed on the \texttt{MSB} or the \texttt{LSB}). This type of code though isn't very strong because it can only detect $1+2k$ errors and can't correct them.
+    \subparagraph{Parity bit} The simplest type of error detection code is this, it simply consists in adding one bit to the message making the count of bits equal to \one\ odd or even (depends on the standard, usually it is even; another thing that depends on the standard is whether the bit is placed on the \texttt{MSB} or the \texttt{LSB}). This type of code though isn't very strong because it can only detect $1+2k$ errors and can't correct them.
     \subparagraph{Longitudinal and vertical parity bits} This code uses between $2\sqrt{n}$ and $n+1$ redundancy bits, it consists in making a matrix out of the message's bits and using each redundancy bit as a parity bit for one of the rows or one of the columns. As we can see this code is much heavier than a simple parity bit, but it can on the other hand detect more errors and correct at least one (if for some strange reason we know for a fact that exactly 2 errors have occurred on two different bits there are cases where we could correct both).
     \subparagraph{Hamming code} In a string of $n$ bits $r=\lceil\log_2{n}\rceil$ of them are used as redundancy bits: for example 7 bit transmissions have to dedicate 3 bits to redundancy (thus the real message is only 4 bits long). Control bits are placed on the $2^k$ positions of the message and work as parity bits for the sequences of bits made such that:
     \begin{equation*}
         s_k=\{m_x\ |\ 2^k(2t+1)\le x \le 2^k(2t+2);\ \forall x \in [1,n] \ \land\ t \in \mathbb{N}_0\}\quad \forall k \in [1,\lceil\log_2{n}\rceil]
     \end{equation*} Where $s_k$ is the sequence of all bits for which the $2^k$-th bit encodes the parity (notice how in the mathematical definition the sequence comprehends that bit too, this was to simplify the expression, to make an exception I would have had to create a nightmare) and $m$ is the set containing all the bits.
-    \section{Boolean algebra}
-    \paragraph{Axioms and properties} It is a quintuple of axioms defining the following properties:
+    \section{Boolean algebra} In boolean algebra there exist three fundamental operations, commutation ($\overline{\ }$, \texttt{NOT}), serial composition ($\cdot$, \texttt{AND}) and parallel composition ($+$, \texttt{OR}).
+    \paragraph{Axioms and properties} Essentially boolean algebra is made up by a quintuple of elements $\langle \zero,\one,+,\cdot,\overline{\ }\rangle$, two identities and three operators for which the following axioms hold:
     \begin{itemize}
         \item Commutativity $\rightarrow x+y=y+x\quad|\quad x\cdot y=y\cdot x$
         \item Associativity $\rightarrow x+(y+z)=(x+y)+z\quad|\quad x(yz)=(xy)z$
@@ -89,21 +89,21 @@
     \subparagraph{From boolean expressions to combinatorial nets} For each boolean expression there exists a unique combinatorial net, while for each $n$-outputs combinatorial net there exist $n$ boolean expressions.
     \paragraph{Some standard combinatorial nets} Some standard functionalities have been thoroughly studied and resolved in a modular fashion that can accomodate any length of bits- here are some of them.
     \subparagraph{Parallel adder} Each pair of bits $a_i$ and $b_i$ from each sequence $A$ and $B$ is processed semi-independently from the rest of the bits (the carry bit $c_{i-1}$ has to be taken into account too) and each module returns two values, $x_i$ and the (possible) carry bit $c_i$, we can define two types of modules in this design, the half adder (takes in input just $a_i$ and $b_i$) and the full adder (takes in input also $c_{i-1}$); but in reality only the full adder is used since producing just one type of module is much more cost effective than producing a specific module like the half adder too- indeed a full adder when getting $c_{i-1}=\zero$ produces the same results as a half adder.
-    \subparagraph{Comparator} Again a modular system that takes in input $a_i$, $b_i$, $c_{>}$ and $c_{=}$ (last two from previous module, they cannot be \one at the same time and if they are \zero at the same time it means $a_{i-1}\dots a_0 < b_{i-1}\dots b_0$) and gives in output $c'_{>}$ and $c'_{=}$.
-    \subparagraph{Encoder} It is a circuit that, supposing only one of the input lines (which are usually $2^n$) holds value \one, through $n$ output lines encodes the value of the line that is \emph{High}, usually encoders are of the folllowing kind ($4$-to-$2$, $8$-to-$3$, $16$-to-$4$\dots).
+    \subparagraph{Comparator} Again a modular system that takes in input $a_i$, $b_i$, $c_{>}$ and $c_{=}$ (last two from previous module, they cannot be \one\ at the same time and if they are \zero\ at the same time it means $a_{i-1}\dots a_0 < b_{i-1}\dots b_0$) and gives in output $c'_{>}$ and $c'_{=}$.
+    \subparagraph{Encoder} It is a circuit that, supposing only one of the input lines (which are usually $2^n$) holds value \one , through $n$ output lines encodes the value of the line that is \emph{High}, usually encoders are of the folllowing kind ($4$-to-$2$, $8$-to-$3$, $16$-to-$4$\dots).
     \subparagraph{Decoder} Essentially it is the inverse of an encoder- given a natural value (in base $2$ of course) through the parallel input lines it will raise the corresponding output line's current to \emph{High} (in other terms, digital \one).
     \subparagraph{ROM- Read Only Memory} A read only memory (called so because of the impossibility of changing it since it has to have OR-gates/diodes soldered onto it) is a circuit that, given $n$ lines and produced $2^n$ all possible permutations (minterms equivalents) of those lines values (similarly or exactly as a decoder), gives in output $m$ lines (the amount depends by the design) that compute $m$ boolean expressions in disjunctive canonical form.
     \subparagraph{PLA- Programmable Logic Array} It is a combinatorial net with $n$ inputs and $m$ outputs and can be divided in three layers: the complementation (of the inputs) layer, the AND matrix and the OR matrix. While being pretty similar to a ROM it is much more efficient because of its high customizability, both the AND and the OR matrices can indeed be custom designed by the user and thus calculate \emph{minimal} SOPs. This efficiency though comes at a cost- time, it is indeed much more work to design a nice PLA *(the real cost though is cheaper, more efficient use of gates and smaller sizes are a great plus).
-    \subparagraph{Multiplexer} It is a net that, given $n$ input lines, has another pair of $n$ selector lines that are equal to \one one at a time and outputs just one line equal to the value of the $x_i$ selected line (through the $k_i$ selector line).
+    \subparagraph{Multiplexer} It is a net that, given $n$ input lines, has another pair of $n$ selector lines that are equal to \one\ one at a time and outputs just one line equal to the value of the $x_i$ selected line (through the $k_i$ selector line).
     \subparagraph{MUX} Of course the $k$ selector lines can be connected themselves to a decoder (thus reducing the amount of total input lines and headaches to the designer) through which the selector lines themselves do not need to be handled one by one, but \emph{selected} by their respective code of the line (which conveniently is equal to the one of the $x$ input lines).
-    \subparagraph{Demultiplexer} It is essentially the inverse of a multiplexer, indeed from just one input line (and $n$ selector lines that again can be equal to \one just one at a time) it can be decided to which $n$ output lines its value will be passed to.
+    \subparagraph{Demultiplexer} It is essentially the inverse of a multiplexer, indeed from just one input line (and $n$ selector lines that again can be equal to \one\ just one at a time) it can be decided to which $n$ output lines its value will be passed to.
     \subparagraph{DEMUX} Again, we can make the whole circuit more straightforward by connecting the selector lines to a decoder such that the lines can be select through their respective codes.
     \subparagraph{BIG NO-NO} Watch out! The definitions given here are in strict and non-strict sense: in strict sense it is not known from where and how are selector lines handled (thus multiplexer and demultiplexer, $n$ selector lines), in the non-strict sense we instead use decoders since it is one of the most straightforward integration of those (thus MUX and DEMUX, lowering thus to $\log_2{n}$ selector lines).
     \subparagraph{Little example} Through the use of a MUX and a DEMUX it is possible to pass from parallel to serial signals! (Clocks have to be in sync!)
     \section{Sequential nets}
     Until now we've considered just acyclic circuits- combinatorial nets indeed don't take in consideration one huge fact- time. Electricity is not instantaneous, it is just very fast and, because of this, in sequential nets we take into account what we call \emph{crossing time} (time for an electron to go from point $A$ to $B$ on the same line) and the time it takes for an IC or gate to respond to an input, defined as $\tau$.
     Under the assumption that a circuit is instantaneous indeed a circuit getting in input its own output is pretty preposterous.
-    If we take into account time and let variables really live up to their name (to change over time!) something like $y = x \cdot y$ would finally make sense- It may be difficult to comprehend it, but if we define a new variable $Y$ as $y$ after $t+\tau$ time as passed, it can be represented in this way:
+    If we take into account time and let variables really live up to their name (to change over time!) something like $y = x \cdot y$ would finally make sense- It may be difficult to comprehend it, but if we define a new variable $Y$ as $y$ after $t+\tau$ time as passed, it can be represented in this way (through what we call an excitation equation):
     \begin{equation*}
         Y= x\cdot y
     \end{equation*}
@@ -164,7 +164,7 @@
         \endminipage
         \end{figure}
     \subparagraph{T latch} This is the final latch and it works around the JK one; similarly to the D latch now we want to keep just the \texttt{HOLD} and \texttt{TOGGLE} functions by replacing \texttt{j} and \texttt{k} with just a \texttt{t} line.
-    \paragraph{Cync and Async systems} Now there exists an important difference to be made between two main types of sequential circuits.
+    \paragraph{Sync. and Async. systems} Now there exists an important difference to be made between two main types of sequential circuits.
     \begin{itemize}
         \item Asynchronous systems, their outputs change every time the inputs change.
         \item Synchronous systems, their outputs change on every pulse of a periodic signal given by a clock.
@@ -198,9 +198,9 @@
         \item Mealy automata: relating transitions to outputs $\lambda:Q\times\Sigma\to\Delta$
     \end{itemize}
     \paragraph{Equivalence between the two} Two automata of the same kind are said to be equivalent if, for the same sequence of inputs, they produce the same outputs. On the other hand, two different kind of automata are said to be equivalent if \emph{except for the first bit produced by the Moore automaton} they produce the same sequence of outputs (again, supposing the same sequence of inputs). How to prove this for \emph{any} automaton? The proof can be done either formally or empirically:
-    \subparagraph{From Moore to Mealy} Their equivalence can be done formally by letting $M_1=\langle Q,\Sigma, \Delta, q_0, \delta, \lambda\rangle$ be the original Moore automaton and $M_2=\langle Q, \Sigma, \Delta, q_0, \delta, \lambda'\rangle$ be the equivalent Mealy automaton; as we can see their only difference is the function relating outputs- we can define $\lambda'$ such that:
+    \subparagraph{From Moore to Mealy} Their equivalence can be done formally by letting $M_1=\langle Q,\Sigma, \Delta, q_0, \delta, \lambda\rangle$ be the original Moore automaton and $M_2=\langle Q, \Sigma, \Delta, q_0, \delta', \lambda'\rangle$ be the equivalent Mealy automaton; as we can see their only difference is the function relating outputs- we can define $\lambda'$ such that:
     \begin{equation*}
-        \lambda'(q,i)=\lambda(\delta(q,i))
+        \lambda'(q,i)=\lambda(\delta'(q,i))
     \end{equation*}
     In this way we are stating each output related to a transition in $M_2$ is equal to the output related to arrival states in $M_1$.
     In a more empirical way we can prove their equivalence by induction (even though it won't be practical), let $\sigma$ be any sequence of $n$ length of characters, if we can prove the equivalence between two different automaton on this sequence (in reality we should check any possible permutation of $\sigma$ through $\Sigma$) then we should also prove $n+1$ and then $n+2$ and so on (keep in mind that the sequence of the Moore automaton will have a first character that should not be considered for equivalence).
@@ -240,14 +240,14 @@
         \item A transition function derived again from the original automaton that has to be reobtained by letting: $(class(q),i)\to class(q')$ whenever $(q,i)\to q'\in\delta$
         \item The output function on the other hand: for Moore the output of $q$ to the class of $q$, for Mealy the output of $(q,i)\to q'$ to the transition $(class(q),i)\to class(q')$
     \end{itemize}
-    \section{Analysis of sequential nets} Analyzing a sequential circuit means to describe it using an automata:
+    \subparagraph{Analysis procedure} Analyzing a sequential circuit means describing it using an automata:
     \begin{itemize}
-        \item Identify the memory elements of the circuit (the Flip Flops).
-        \item Identify (again) all the memory of the system given the status of the circuit.
+        \item Identify the memory elements (Flip Flops) of the circuit.
+        \item Identify all the memory of the system given the status of the circuit.
         \item Compute the outputs produced by the system and the next memory state of the circuit for every possible state and input combination.
     \end{itemize}
-    \subparagraph{Analysis procedure} We first need to analyze the combinatorial parts of the circuit such that to get all the boolean expressions for each variable (every input of each flip flop is a variable) and to get a truth table of them all, done that establish the future states of the circuit considering the the current states (all of them given by the truth table). Finally give symbolic names to every possible combination of bits stored in the flip flops, to every possible input sequence and to every possible output sequence. In the end infer the transitions and the output functions into an automaton. Lastly minimize the automaton, draw it and possibly give a verbal description of it.
-    \subparagraph{Synthesis procedure} Like in a combinatorial net, the synthesis procedure is done such that to create a real digital circuit out of an "abstract" mathematical/graphical design. If not already done, from the verbal description we should get the automaton, from that (supposing it is already minimized) give binary encodings such that to cover all the possible states, the input and the output alphabets. From this derive a truth table containing the future states (thus an \emph{extended} truth table) and create entries for the input lines of all the needed flip flops (as many as there are bits needed to encode the states), decide which flip flop kind is the best by looking at its excitation table (if not specifically given). Finally derive from this table all of the needed boolean functions, possibly minimal. (Remember that how you decide to encode the states, the inputs and the outputs can matter on the efficiency of the design).
+    We first need to analyze the combinatorial parts of the circuit to find each output's boolean expression and each Flip Flop's excitation equation. From those produce the truth table and the future states of the circuit considering the current ones. Then give symbolic names to every possible state and to every possible input or output sequence and, in the end, infer the transitions and the output functions into an automaton- minimize it, draw it and possibly give a verbal description for it.
+    \subparagraph{Synthesis procedure} Similarly to a combinatorial net, its synthesis is such that to create a real digital circuit out of a mathematical abstraction, a graphical and/or a verbal description. If not already done, from the verbal description we should get the automaton, from that (supposing it is already minimized) give binary encodings such that to cover all the possible states, the input and the output alphabets. From this derive a truth table containing the future states (thus an \emph{extended} truth table) and create entries for the input lines of all the needed flip flops (as many as there are bits needed to encode the states), decide which flip flop kind is the best by looking at its excitation table (if not specifically given). Finally derive from this table all of the needed boolean functions, possibly minimal. (Remember that how you decide to encode the states, the inputs and the outputs can matter on the efficiency of the design).
     \section{Registers}
     A register is an IC composed as a sequence of n flip flops, with them there are various technical issues that can be solved in multiple ways:
     \begin{itemize}
@@ -287,8 +287,8 @@
     \subparagraph{Modulo k counter} From this notion we can see how making a \texttt{mod} $k$ counter becomes very easy, just create a circuit returning 1 on the occurrence of the bits encoding $k$ and when it goes High reset the counter through an \texttt{all-CLEAR} signal going through all the flip flops.
     \subparagraph{Jumps in presettable counters} These kinds of counters are mostly used in program counters and, as previously said, enable us to keep track of the current evaluated line of code and work like this:
     \begin{itemize}
-        \item If PL (a new signal line) holds \zero then they work as a normal upwise counter.
-        \item If PL holds \one the register immediately stores values fed throgh pins $\texttt{P}_{n-1}\dots\texttt{P}_0$ in their respective flip flops, after PL goes \zero the counter returns to counting from the stored value.
+        \item If PL (a new signal line) holds \zero\ then they work as a normal upwise counter.
+        \item If PL holds \one\ the register immediately stores values fed throgh pins $\texttt{P}_{n-1}\dots\texttt{P}_0$ in their respective flip flops, after PL goes \zero\ the counter returns to counting from the stored value.
         \item If we want to keep storing new values we just keep PL to \one.
     \end{itemize}
     \paragraph{Interconnections between registers} To be stored and handled throgh a circuit, information has to be moved from one register to another within the system: this is done through interconnection nets. (When using parallel output registers data is \emph{not moved}, because it remains in the source register, it is \emph{copied})
